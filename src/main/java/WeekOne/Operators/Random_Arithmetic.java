@@ -1,5 +1,5 @@
 package WeekOne.Operators;
-
+import java.util.Random;
 public class Random_Arithmetic {
     /*
     access modifier - public => private, protected, default
@@ -19,6 +19,21 @@ public class Random_Arithmetic {
     }
 
     public static void main(String[] args) {
-        printInt("Some String", 20);
+        // Call to the class random
+        Random random = new Random();
+        // Created three variables
+        int j, k;
+        j = random.nextInt(100) + 1;
+        k = random.nextInt(100) + 1;
+
+        printFloat("J value", j);
+        printFloat("K value", k);
+
+        float u, v;
+        u = random.nextFloat() + 1;
+        v = random.nextFloat() + 1;
+
+        printFloat("U value", u);
+        printFloat("V value", v);
     }
 }
