@@ -20,7 +20,7 @@ public class Logical_with_if {
             System.out.println(value);
             System.out.println(count);
         }
-        int x = 1;
+        int x = 2;
         int y = 2;
         if (x != y) {
             System.out.println(x + y);
