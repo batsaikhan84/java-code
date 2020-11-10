@@ -1,5 +1,7 @@
 package WeekOne.WK2MondayHW;
 
+import java.util.Arrays;
+
 public class HW {
     public static String withoutEnd2(String str) {
         String result = str.substring(1, str.length());
@@ -31,13 +33,35 @@ public class HW {
     }
     public static String deFront(String str) {
         String result = "";
-        if (str.substring(0,1) == "a"){
+        if (str.substring(0, 1).equals("a")) {
             result = result.concat(str.substring(0, 1));
         }
-        if (str.substring(1, 2) == "b") {
+        if (str.substring(1, 2).equals("b")) {
             result = result.concat(str.substring(1, 2));
         }
         return result.concat(str.substring(2));
+    }
+    public static String withoutX(String str) {
+        String result = "";
+        if (str.startsWith("x")) {
+            result = str.substring(1);
+        }
+        if (result.endsWith("x")) {
+            result = result.substring(0, result.length() - 1);
+        }
+        return result;
+    }
+    public static int[] biggerTwo(int[] arrA, int[] arrB) {
+        int a = 0;
+        int b = 0;
+        for (int i: arrA) {
+            a += i;
+        };
+        for (int i: arrB) {
+            b += i;
+        }
+        int[] result = new int[] {a, b};
+        return result;
     }
     public static void main(String[] args) {
 //        System.out.println("#1 ---withoutEnd2---");
@@ -48,7 +72,13 @@ public class HW {
 //        System.out.println(twoChar("java", 0));
 //        System.out.println("#4 ---frontAgain---");
 //        System.out.println(frontAgain("edit"));
-        System.out.println("#5 ---deFront---");
-        System.out.println(deFront("away"));
+//        System.out.println("#5 ---deFront---");
+//        System.out.println(deFront("away"));
+//        System.out.println("#6 ---WithoutX---");
+//        System.out.println(withoutX("xHix"));
+        System.out.println("#7 ---biggerTwo---");
+        int[] arrA = {1, 2};
+        int[] arrB = {3, 4};
+        System.out.println(Arrays.toString(biggerTwo(arrA, arrB)));
     }
 }
