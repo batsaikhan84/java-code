@@ -11,5 +11,14 @@ public class HW {
         String partB = str.substring(str.length() - n, str.length());
         return partA.concat(partB);
     }
+    public static String twoChar(String str, int n) {
+        String result = "";
+        if (n < 2 || n > str.length()-2) {
+            result = str.substring(0, 2);
+        } else {
+            result = str.substring(n, n + 2);
+        }
+        return result;
+    }
 
 }
