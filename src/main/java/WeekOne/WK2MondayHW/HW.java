@@ -6,4 +6,10 @@ public class HW {
         result = result.substring(0, result.length() - 1);
         return result;
     }
+    public static String nTwice(String str, int n) {
+        String partA = str.substring(0, n);
+        String partB = str.substring(str.length() - n, str.length());
+        return partA.concat(partB);
+    }
+
 }
