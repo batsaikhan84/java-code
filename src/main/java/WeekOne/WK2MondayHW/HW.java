@@ -20,5 +20,14 @@ public class HW {
         }
         return result;
     }
+    public static Boolean frontAgain(String str) {
+        Boolean result = true;
+        if (str.substring(0, 2) == str.substring(str.length()-2, str.length())) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+    }
 
 }
