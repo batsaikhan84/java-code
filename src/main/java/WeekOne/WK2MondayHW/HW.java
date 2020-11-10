@@ -63,6 +63,13 @@ public class HW {
         int[] result = new int[] {a, b};
         return result;
     }
+    public static int[] swapEnds(int[] arr) {
+        int[] result ={};
+        for (int i = 0; i < arr.length; i++) {
+
+        }
+        return result;
+    }
     public static void main(String[] args) {
 //        System.out.println("#1 ---withoutEnd2---");
 //        System.out.println(withoutEnd2("Hello"));
@@ -76,9 +83,12 @@ public class HW {
 //        System.out.println(deFront("away"));
 //        System.out.println("#6 ---WithoutX---");
 //        System.out.println(withoutX("xHix"));
-        System.out.println("#7 ---biggerTwo---");
-        int[] arrA = {1, 2};
-        int[] arrB = {3, 4};
-        System.out.println(Arrays.toString(biggerTwo(arrA, arrB)));
+//        System.out.println("#7 ---biggerTwo---");
+//        int[] arrA = {1, 2};
+//        int[] arrB = {3, 4};
+//        System.out.println(Arrays.toString(biggerTwo(arrA, arrB)));
+        System.out.println("#8 ---swapEnds---");
+        int[] arr = {1, 2, 3, 4};
+        System.out.println(Arrays.toString(swapEnds(arr)));
     }
 }
