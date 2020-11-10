@@ -31,23 +31,23 @@ public class HW {
     }
     public static String deFront(String str) {
         String result = "";
-        if (str.substring(0, 1) == "a") {
-            result = result.concat("a");
+        if (str.substring(0,1) == "a"){
+            result = result.concat(str.substring(0, 1));
         }
         if (str.substring(1, 2) == "b") {
-            result = result.concat("b");
+            result = result.concat(str.substring(1, 2));
         }
-        return result.concat(str.substring(2, str.length()));
+        return result.concat(str.substring(2));
     }
     public static void main(String[] args) {
-        System.out.println("#1 ---withoutEnd2---");
-        System.out.println(withoutEnd2("Hello"));
-        System.out.println("#2 ---nTwice---");
-        System.out.println(nTwice("Chocolate", 1));
-        System.out.println("#3 ---twoChar---");
-        System.out.println(twoChar("java", 0));
-        System.out.println("#4 ---frontAgain---");
-        System.out.println(frontAgain("edit"));
+//        System.out.println("#1 ---withoutEnd2---");
+//        System.out.println(withoutEnd2("Hello"));
+//        System.out.println("#2 ---nTwice---");
+//        System.out.println(nTwice("Chocolate", 1));
+//        System.out.println("#3 ---twoChar---");
+//        System.out.println(twoChar("java", 0));
+//        System.out.println("#4 ---frontAgain---");
+//        System.out.println(frontAgain("edit"));
         System.out.println("#5 ---deFront---");
         System.out.println(deFront("away"));
     }
