@@ -1,12 +1,8 @@
 package WeekOne.WK2MondayHW;
 
-import java.util.Arrays;
-
 public class HW {
     public static String withoutEnd2(String str) {
-        String result = str.substring(1, str.length());
-        result = result.substring(0, result.length() - 1);
-        return result;
+        return str.substring(1, str.length() - 1);
     }
     public static String nTwice(String str, int n) {
         String partA = str.substring(0, n);
@@ -64,8 +60,21 @@ public class HW {
         return result;
     }
     public static int[] swapEnds(int[] arr) {
-        int[] result ={};
+        int[] result = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
+            if (i == 0) {
+                result[i] = arr[arr.length - 1];
+            } else if (i == arr.length - 1) {
+                result[i] = arr[0];
+            } else {
+                result[i] = arr[i];
+            }
+        }
+        return result;
+    }
+    public static int[] plusTwo(int[] arrA, int[] arrB) {
+        int[] result = new int[arrA.length + arrB.length];
+        for (int i = 0; i < arrA.length; i++) {
 
         }
         return result;
@@ -87,8 +96,8 @@ public class HW {
 //        int[] arrA = {1, 2};
 //        int[] arrB = {3, 4};
 //        System.out.println(Arrays.toString(biggerTwo(arrA, arrB)));
-        System.out.println("#8 ---swapEnds---");
-        int[] arr = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(swapEnds(arr)));
+//        System.out.println("#8 ---swapEnds---");
+//        int[] arr = {1, 2, 3, 4};
+//        System.out.println(Arrays.toString(swapEnds(arr)));
     }
 }
