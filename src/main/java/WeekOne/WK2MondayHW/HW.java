@@ -1,5 +1,6 @@
 package WeekOne.WK2MondayHW;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class HW {
@@ -98,6 +99,41 @@ public class HW {
         }
         return result;
     }
+    public static int maxTriple(int[] arr) {
+        int result = 0;
+        if (arr.length == 1) {
+            result = arr[0];
+        } else {
+            int[] tempArr = {arr[0], arr[arr.length - 1], arr[arr.length/2 - 1]};
+            result = Arrays.stream(tempArr).max().getAsInt();
+        }
+        return result;
+    }
+    public static boolean unlucky1(int[] arr) {
+        boolean result = true;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (i == 0 || i == 1 || i == arr.length - 1 || i == arr.length - 2) {
+                if (arr[i] == 1) {
+                    if (arr[i + 1] == 3) {
+                        result = true;
+                    } else {
+                        result = false;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+    public static int[] frontPiece(int[] arr) {
+        int[] result = new int[2];
+        if (arr.length <= 2) {
+            result = arr;
+        } else {
+            result[0] = arr[0];
+            result[1] = arr[1];
+        }
+        return result;
+    }
     public static void main(String[] args) {
 //        System.out.println("#1 ---withoutEnd2---");
 //        System.out.println(withoutEnd2("Hello"));
@@ -122,8 +158,17 @@ public class HW {
 //        int[] arrA = {1, 2};
 //        int[] arrB = {3, 4};
 //        System.out.println(Arrays.toString(plusTwo(arrA, arrB)));
-        System.out.println("#9 ---makeMiddle---");
+//        System.out.println("#10 ---makeMiddle---");
+//        int[] arr = {1, 2, 3, 4};
+//        System.out.println(Arrays.toString(makeMiddle(arr)));
+//        System.out.println("#11 ---maxTriple---");
+//        int[] arr = {1, 2, 3, 5, 6};
+//        System.out.println(maxTriple(arr));
+//        System.out.println("#12 ---unlucky1---");
+//        int[] arr = {2, 1, 2, 1, 3};
+//        System.out.println(unlucky1(arr));
+        System.out.println("#13 ---frontPiece---");
         int[] arr = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(makeMiddle(arr)));
+        System.out.println(Arrays.toString(frontPiece(arr)));
     }
 }
