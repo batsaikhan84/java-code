@@ -1,5 +1,7 @@
 package WeekOne.WK2MondayHW;
 
+import java.util.Arrays;
+
 public class HW {
     public static String withoutEnd2(String str) {
         return str.substring(1, str.length() - 1);
@@ -74,8 +76,25 @@ public class HW {
     }
     public static int[] plusTwo(int[] arrA, int[] arrB) {
         int[] result = new int[arrA.length + arrB.length];
+        int index = 0;
         for (int i = 0; i < arrA.length; i++) {
-
+            result[index] = arrA[i];
+            index++;
+        }
+        for (int i = 0; i < arrB.length; i++) {
+            result[index] = arrB[i];
+            index++;
+        }
+        return result;
+    }
+    public static int[] makeMiddle(int[] arr) {
+        int[] result = new int[2];
+        int index = arr.length/2;
+        if (arr.length == 2) {
+            result = arr;
+        } else {
+            result[0] = arr[index - 1];
+            result[1] = arr[index];
         }
         return result;
     }
@@ -99,5 +118,12 @@ public class HW {
 //        System.out.println("#8 ---swapEnds---");
 //        int[] arr = {1, 2, 3, 4};
 //        System.out.println(Arrays.toString(swapEnds(arr)));
+//        System.out.println("#9 ---plusTwo---");
+//        int[] arrA = {1, 2};
+//        int[] arrB = {3, 4};
+//        System.out.println(Arrays.toString(plusTwo(arrA, arrB)));
+        System.out.println("#9 ---makeMiddle---");
+        int[] arr = {1, 2, 3, 4};
+        System.out.println(Arrays.toString(makeMiddle(arr)));
     }
 }
