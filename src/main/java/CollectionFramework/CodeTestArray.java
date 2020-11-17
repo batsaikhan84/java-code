@@ -4,14 +4,13 @@ import java.util.Arrays;
 
 public class CodeTestArray {
     public static void main(String[] args) {
-        /*
-        print the total sum and length of an array
-         */
-        ArraySum();
-        findDuplicate();
-        findMinMax();
+//        ArraySum();
+//        findDuplicate();
+//        findMinMax();
+        System.out.println(tripleUp());
 
     }
+    // print the total sum and length of an array
     public static void ArraySum() {
         int[] arrOne = {12, 23, 33, 44, 66, 5, 6, 9, 7, 6};
         System.out.println(Arrays.stream(arrOne).sum());
@@ -45,5 +44,14 @@ public class CodeTestArray {
         }
         System.out.println("Max is: " + max);
         System.out.println("Min is: " + min);
+    }
+    public static boolean tripleUp() {
+        int[] arr = {1,1,3,4,6,8,5,4,3,6,7,8,8,};
+        for (int i = 0; i < arr.length - 2; i++) {
+            if(arr[i] + 1 == arr[i+1] && arr[i + 1] + 1 == arr[i + 2]) {
+                return true;
+            }
+        }
+        return false;
     }
 }
